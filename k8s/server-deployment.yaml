@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata: 
+  name: server-deployment
+spec:
+  replicas: 1
+  selector: 
+    matchLabels: 
+      component: server
+  template:
+    metadata:
+      labels: 
+        component: server
+    spec:
+      containers: 
+        - name: server
+          image: razik/fib-server
+          ports: 
+            - containerPort: 5000
+          env:
+
+              # How to connect it the redis ClusterIP object (How to reach out to the Redis instance)
+            - name:  REDIS_HOST
+              value: redis-cluster-ip-service
+
+            - name:  REDIS_PORT
+              value: '6379'
+
+            - name: PGUSER
+              value: postgres 
+
+              # How to connect it the postgres ClusterIP object (How to reach out to the Postgres instance)
+            - name: PGHOST
+              value: postgres-cluster-ip-service 
+
+            - name: PGPORT
+              value: '5432'
+
+            - name: PGDATABASE
+              value: postgres
+
+            - name: PGPASSWORD
+              valueFrom: 
+                secretKeyRef:
+                  name: pgpassword
+                  key: POSTGRES_PASSWORD
+
+
+

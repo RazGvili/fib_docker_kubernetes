@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: data-persistent-volume-claim
+spec: 
+  accessModes:
+
+    # Accessible by one node only 
+    - ReadWriteOnce
+
+  resources: 
+    requests: 
+      storage: 1Gi

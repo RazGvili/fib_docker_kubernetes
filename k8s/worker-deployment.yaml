@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata: 
+  name: worker-deployment
+spec:
+  replicas: 1
+  selector: 
+    matchLabels: 
+      component: worker
+  template:
+    metadata:
+      labels: 
+        component: worker
+    spec:
+      containers: 
+        - name: worker
+          image: razik/fib-worker
+          env:
+            - name:  REDIS_HOST
+
+              # Name of the ClusterIP cluster
+              value: redis-cluster-ip-service
+
+            - name:  REDIS_PORT
+              value: '6379'
+              
