@@ -1,4 +1,9 @@
-# Load balancer is a service, hence balanced a deployment (cluster of pods). We need at two. 
+# Load balancer is a service object, hence balanced a deployment (cluster of pods). We need at two. 
+
+# Using Helm, which is similar to NPM for kubernetes. 
+## Installed from script V3
+## The installation will add 2 pods to our cluster 
+## The cluster IP is in the "network services tab" in the GCP console 
 
 apiVersion: extensions/v1beta1
 kind: Ingress
