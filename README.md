@@ -2,7 +2,7 @@
 
 ## Purpose
 Practice Docker & Kubernetes.
-This app calculates the value of a Fibonacci value given an index of the series. Example: For the index 6 the value is 13.
+This app calculates the value of a Fibonacci value given an index. Example: For the index 6 the value is 13.
 
 ## CI
 The master branch is integrated into TravisCI, a successful deploy must pass the react app tests. 
