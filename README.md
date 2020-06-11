@@ -21,10 +21,10 @@ returns create-react-app static files
 ### Express server k8s Deployment exposed via ClusterIp service 
 API for Fibonacci calculations. Will save indices the app seen in a Postgress DB. The calculated values will first be saved as "ready", then will be passed to the worker container. 
 
-## Worker k8s Deployment
+### Worker k8s Deployment
 Listens to the saved Redis values (Pub/Sub), then calculates the Fibonacci value. 
 
-## Redis Deployment exposed via ClusterIp service 
+### Redis Deployment exposed via ClusterIp service 
 
-## Postgres Deployment exposed via ClusterIp service with PVC
+### Postgres Deployment exposed via ClusterIp service with PVC
 
