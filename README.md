@@ -7,7 +7,7 @@ This app calculates the value of a Fibonacci value given an index of the series.
 The master branch is integrated into TravisCI, a successful deploy must pass the react app tests. 
 After success, a script will build and push to docker hub + set a new image to a k8s cluster deployed on GKE. 
 
-# App architecture (#### See attached images)
+# App architecture
 
 ## Components
 
