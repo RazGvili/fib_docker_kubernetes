@@ -1,6 +1,7 @@
 *Part of a Docker course - "docker-and-kubernetes-the-complete-guide" by the great Stephen Grider
 
 ## Purpose
+Practice Docker & Kubernetes.
 This app calculates the value of a Fibonacci value given an index of the series. Example: For the index 6 the value is 13.
 
 ## CI
