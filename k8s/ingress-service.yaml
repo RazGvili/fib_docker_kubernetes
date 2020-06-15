@@ -1,4 +1,4 @@
-# Load balancer is a service object, hence balanced a deployment (cluster of pods). We need at two. 
+# Load balancer is a service object, hence will balance a single deployment (cluster of pods). We need to balance at least two objects. 
 
 # Using Helm, which is similar to NPM for kubernetes. 
 ## Installed from script V3
